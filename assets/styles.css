@@ -1,116 +1,14 @@
-:root {
-    /* --- COLOR PALETTE --- */
-    --color-primary-dark: #042A2A; /* Deep Teal/Dark Green */
-    --color-secondary: #1a8f7a;   /* Vibrant Teal Accent */
-    --color-accent: #FFB545;      /* Warm Gold/Orange Accent */
-    --color-muted: #E0EEEB;       /* Light, readable text on dark background */
-    --color-background-dark: #083358; /* Deep Blue Background Start */
-    --color-background-end: #0b486b; /* Lighter Blue Background End */
-
-    /* --- GRADIENTS --- */
-    --bg-gradient: linear-gradient(135deg, var(--color-background-dark) 0%, var(--color-background-end) 50%, var(--color-secondary) 100%);
-
-    /* --- STYLES --- */
-    --card-bg: rgba(255, 255, 255, 0.08); /* Slightly brighter card background */
-    --text-color-dark: #0b2d2b;
-    --box-shadow-light: 0 4px 12px rgba(0, 0, 0, 0.1);
-    --box-shadow-dark: 0 6px 20px rgba(0, 0, 0, 0.4);
-
-    /* --- TYPOGRAPHY --- */
-    --font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+/* Subtle animal parade (muted so it doesn't overpower) */
+[data-testid="stAppViewContainer"]::before {
+    content: '🦁  🦒  🐘  🦓  🦏';
+    position: fixed;
+    bottom: 18px;
+    left: -120%;
+    font-size: 5.0em;
+    white-space: nowrap;
+    animation: safari-parade 28s linear infinite;
 }
-
-/* --- Global Styles and Typography --- */
-
-/* Apply dark background and font to the entire Streamlit page body */
-/* Ensure the body font is readable */
-body {
-    font-family: var(--font-family);
-    color: var(--color-muted);
-}
-
-/* --- Header Component --- */
-.header {
-    /* Use the predefined gradient */
-    background: var(--bg-gradient);
-    padding: 25px 30px; /* Slightly more padding */
-    border-radius: 12px;
-    color: white;
-    /* Stronger shadow for the main header */
-    box-shadow: var(--box-shadow-dark);
-    margin-bottom: 25px;
-}
-/* Ensure header text contrast is high */
-.header h1 {
-    color: white;
-    font-weight: 600;
-}
-
-
-/* --- Card Styles (Containers) --- */
-
-/* Used for input forms or general content boxes */
-.query-card {
-    background: var(--card-bg);
-    padding: 20px;
-    border-radius: 10px;
-    color: var(--color-muted);
-    border: 1px solid rgba(255, 255, 255, 0.15); /* Subtle border for definition */
-    margin-bottom: 15px;
-}
-
-/* The main output container (The Briefing Document) */
-.response-card {
-    background: white; /* High contrast for readability */
-    padding: 25px;
-    border-radius: 10px;
-    color: var(--text-color-dark);
-    /* Soft, professional shadow */
-    box-shadow: 0 8px 24px rgba(0, 0, 0, 0.15); 
-    border-left: 5px solid var(--color-secondary); /* A visual cue/highlight */
-    margin-top: 20px;
-}
-/* Style headings inside the response card for clarity */
-.response-card h3 {
-    color: var(--color-primary-dark);
-    border-bottom: 2px solid var(--color-accent);
-    padding-bottom: 5px;
-    margin-top: 15px;
-}
-
-
-/* --- Button/Interactive Styles --- */
-
-/* General styling for Streamlit primary buttons */
-.stButton>button {
-    background: var(--color-accent);
-    color: var(--color-primary-dark);
-    font-weight: bold;
-    border: none;
-    padding: 10px 18px;
-    border-radius: 6px;
-    transition: background-color 0.2s, transform 0.1s;
-}
-
-.stButton>button:hover {
-    background: #ffc46a; /* Lighter shade on hover */
-    transform: translateY(-1px);
-}
-
-/* Custom style for example buttons */
-.example-btn {
-    background: linear-gradient(90deg, var(--color-accent), #ff7a59);
-    color: white;
-    border: none;
-    padding: 8px 12px;
-    border-radius: 6px;
-    cursor: pointer;
-    font-size: 0.9em;
-    margin-right: 5px; /* Spacing between buttons */
-    margin-bottom: 8px;
-    display: inline-block;
-}
-
-.example-btn:hover {
-    opacity: 0.9;
+@keyframes safari-parade {
+    from { left: -120%; }
+    to   { left: 120%; }
 }
