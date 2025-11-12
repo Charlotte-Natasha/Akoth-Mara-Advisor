@@ -1,14 +1,40 @@
+/* App Background */
+[data-testid="stAppViewContainer"]
+
 /* Subtle animal parade (muted so it doesn't overpower) */
 [data-testid="stAppViewContainer"]::before {
     content: '🦁  🦒  🐘  🦓  🦏';
     position: fixed;
     bottom: 18px;
-    left: -120%;
+    right: -120%;
     font-size: 5.0em;
     white-space: nowrap;
     animation: safari-parade 28s linear infinite;
+    opacity: 0.15;
+    filter: grayscale(100%) sepia(30%);
 }
+
 @keyframes safari-parade {
-    from { left: -120%; }
-    to   { left: 120%; }
+    from { right: -120%; }
+    to   { right: 120%; }
+}
+
+/* Header Styling */
+.header {
+    background: linear-gradient(135deg, #6b4226 0%, #2f6f4e 100%);
+    padding: 22px;
+    border-radius: 10px;
+    color: white;
+    box-shadow: 0 6px 20px rgba(0,0,0,0.15);
+}
+
+.header h1 {
+    margin: 0;
+    font-size: 2em;
+}
+
+.header p {
+    margin: 8px 0 0 0;
+    opacity: 0.95;
+    font-size: 1em;
 }
