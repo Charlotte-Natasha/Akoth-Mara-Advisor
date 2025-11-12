@@ -1,12 +1,14 @@
-# Kenyan Wildlife Conservation RAG Agent
+# Akoth: Maasai Mara Wildlife Expert Chatbot
 
-This project implements a Retrieval Augmented Generation (RAG) agent designed to provide accurate information about Kenyan wildlife and conservation efforts. The agent uses document retrieval powered by LangChain, embeddings, and a language model to answer natural language queries based on relevant conservation documents.
+Welcome to **Akoth**, an interactive chatbot app powered by Streamlit, LangChain, Google Gemini AI models, and ChromaDB vector search. Akoth provides engaging, conversational insights about Kenyan wildlife, Maasai Mara ecosystems, and conservation efforts using a retrieval-augmented generation (RAG) method.
 
 ## Features
-- Retrieval from Kenyan wildlife conservation PDFs and texts
-- Embedding-based semantic search using HuggingFace and Sentence Transformers
-- Streamlit web interface for interactive querying
-- Modular Python code for indexing and querying
+
+- Natural language querying of a curated wildlife knowledge base
+- Advanced LLM (Gemini) from Google GenAI used via LangChain SDK
+- Contextual retrieval from ChromaDB vector store of wildlife documents
+- User-friendly Streamlit interface with clickable example questions
+- Easy setup with environment variable API keys and reusable Python modules
 
 ## Installation and Setup
 
