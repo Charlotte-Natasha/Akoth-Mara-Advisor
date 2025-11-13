@@ -1,6 +1,6 @@
-# Akoth: Maasai Mara Wildlife Expert Chatbot
+# Akoth: Maasai Mara Wildlife Expert 
 
-Welcome to **Akoth**, an interactive chatbot app powered by Streamlit, LangChain, Google Gemini AI models, and ChromaDB vector search. Akoth provides engaging, conversational insights about Kenyan wildlife, Maasai Mara ecosystems, and conservation efforts using a retrieval-augmented generation (RAG) method.
+Welcome to **Akoth**, an interactive Q&A app powered by Streamlit, LangChain, Google Gemini AI models, and ChromaDB vector search. Akoth provides engaging, conversational insights about Kenyan wildlife, Maasai Mara ecosystems, and conservation efforts using a retrieval-augmented generation (RAG) method.
 
 ## Features
 
@@ -51,3 +51,4 @@ from langchain_huggingface import HuggingFaceEmbeddings
 ## License
 
 This project is open source and available under the MIT License.
+
